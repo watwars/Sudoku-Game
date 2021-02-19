@@ -93,7 +93,8 @@ function clearBoard() {
 
 function checkInput() {
     currentInput = formInput[focusElement].value
-    if (currentInput <= 0 || currentInput > 9) {
+    console.log(currentInput)
+    if (currentInput == 0 || currentInput > 9) {
         message.innerHTML = "Your recent input was invalid. It has been removed"
         formInput[focusElement].value = ""
         return;
@@ -200,6 +201,11 @@ function writeValues(nums, solved) {
         }
         formInput[i].dataset.solution = solved[i]
         formInput[i].dataset.index = i;
+        formInput[i].onkeydown = (e) => {
+            if (e.which === 38 || e.which === 40) {
+                e.preventDefault();
+            }
+        }
         formInput[i].onfocus = setFocus
         formInput[i].oninput = checkInput
     }
