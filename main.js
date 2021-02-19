@@ -74,7 +74,6 @@ function giveHint() {
 function readDifficultyAndGenerate() {
     document.getElementById("hint").disabled = false;
     document.getElementById("solve-button").disabled = false;
-    localStorage.clear()
     livesMes.innerHTML = 3;
     hintsMes.innerHTML = 3;
     localStorage.setItem("hints", JSON.stringify(3))
