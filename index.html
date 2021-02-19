@@ -1,0 +1,128 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku Solver</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="jumbotron">
+        <h1>Play Sudoku for Free</h1>
+    </div>
+    <p id="message-p"></p>
+    <div class="main">
+        <div id="sudoku" class="sudoku">
+            <form id="sudoku-form">
+                <input type="number" class="number bu bl">
+                <input type="number" class="number bu">
+                <input type="number" class="number bu br">
+                <input type="number" class="number bu">
+                <input type="number" class="number bu">
+                <input type="number" class="number bu br">
+                <input type="number" class="number bu">
+                <input type="number" class="number bu">
+                <input type="number" class="number bu br">
+                <br>
+                <input type="number" class="number bl">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <input type="number" class="number">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <input type="number" class="number">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <br>
+                <input type="number" class="number bl bb">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb br">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb ">
+                <input type="number" class="number bb br">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb br">
+                <br>
+                <input type="number" class="number bl">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <input type="number" class="number">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <input type="number" class="number">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <br>
+                <input type="number" class="number bl">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <input type="number" class="number">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <input type="number" class="number">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <br>
+                <input type="number" class="number bl bb">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb br">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb br">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb br">
+                <br>
+                <input type="number" class="number bl">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <input type="number" class="number">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <input type="number" class="number">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <br>
+                <input type="number" class="number bl">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <input type="number" class="number">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <input type="number" class="number">
+                <input type="number" class="number">
+                <input type="number" class="number br">
+                <br>
+                <input type="number" class="number bb bl">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb br">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb br">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb">
+                <input type="number" class="number bb br">
+                <br>
+            </form>
+        </div>
+        <div class="controls">
+            <label>Difficulty: </label>
+            <select name="difficulty" class="form-control" id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="random">Random</option>
+            </select><br>
+            <button id="generate" class="btn btn-success btn-generate">New Game</button><br>
+            <button id="hint" class="btn btn-warning btn-help">Hint</button>
+            <button id="solve-button" class="btn btn-danger btn-help">Solve</button><br><br>
+            <span class="lives">Lives Remaining: <span id="lives"></span><br>Hints Remaining: <span id="hints"></span></span>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.1/axios.min.js"></script>
+    <script src="solver.js"></script>
+    <script src="main.js"></script>
+</body>
+</html>
