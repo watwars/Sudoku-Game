@@ -72,6 +72,7 @@ function giveHint() {
 }
 
 function readDifficultyAndGenerate() {
+    message.innerHTML = ""
     document.getElementById("hint").disabled = false;
     document.getElementById("solve-button").disabled = false;
     livesMes.innerHTML = 3;
