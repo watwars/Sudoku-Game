@@ -12,6 +12,16 @@ let hints = JSON.parse(localStorage.getItem("hints")) + 1 || 3
 localStorage.setItem("hints", JSON.stringify(hints - 1))
 lives--;
 hints--;
+let visits = JSON.parse(localStorage.getItem("visits")) || 1
+if (visits == 1) {
+    generateBoard("easy")
+    lives = 3
+    hints = 3
+    localStorage.setItem("hints", JSON.stringify(3))
+    localStorage.setItem("lives", JSON.stringify(3))
+}
+visits++
+localStorage.setItem("visits", JSON.stringify(visits))
 livesMes.innerHTML = lives
 hintsMes.innerHTML = hints
 
