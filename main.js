@@ -77,6 +77,8 @@ function readDifficultyAndGenerate() {
     document.getElementById("solve-button").disabled = false;
     livesMes.innerHTML = 3;
     hintsMes.innerHTML = 3;
+    lives = 3
+    hints = 3
     localStorage.setItem("hints", JSON.stringify(3))
     localStorage.setItem("lives", JSON.stringify(3))
     clearBoard();
@@ -195,7 +197,7 @@ function writeValues(nums, solved) {
             formInput[i].value = nums[i];
             formInput[i].readOnly = true;
             const original = JSON.parse(localStorage.getItem("original"))
-            if (nums[i] == original[i] && nums[i] != -1) {
+            if (nums[i] == original[i] && nums[i] != -1 && original[i] != -1) {
                 formInput[i].style.fontWeight = "bold";
             }
         }
